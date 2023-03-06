@@ -10,8 +10,16 @@
  */
 function isArrayLengthOdd(numbers) {
   // Your code here
-}
+  let l =numbers.length
 
+  if (l%2===1 ){
+  return  true
+}else {
+  return false 
+}
+}
+const numbers = []
+isArrayLengthOdd(numbers)
 /**
  * isArrayLengthEven(numbers):
  * - receives array `numbers`
@@ -24,8 +32,15 @@ function isArrayLengthOdd(numbers) {
  */
 function isArrayLengthEven(numbers) {
   // Your code here
+  let l2= numbers.length
+  
+  if (l2%2===0) {
+    return true
+  } else {
+return false 
+  }
 }
-
+console.log( isArrayLengthEven([1, 2, 3]) , " -> false")
 /**
  * addLailaToArray(instructors):
  * - receives array `instructors`
@@ -36,8 +51,10 @@ function isArrayLengthEven(numbers) {
  */
 function addLailaToArray(instructors) {
   // Your code here
+  instructors.push("Laila")
+return instructors
 }
-
+console.log(addLailaToArray(["Mshary", "Hasan"]),' -> ["Mshary", "Hasan", "Laila"]')
 /**
  * eliminateTeam(teams):
  * - receives array `teams`
@@ -48,8 +65,10 @@ function addLailaToArray(instructors) {
  */
 function eliminateTeam(teams) {
   // Your code here
+  const lastTeam = teams.pop()
+  return lastTeam
 }
-
+console.log(eliminateTeam(["Brazil", "Germany", "Italy"]) ,'-> "Italy"')
 /**
  * secondHalfOfArrayIfItIsEven(fruits):
  * - receives array `fruits`
@@ -62,8 +81,10 @@ function eliminateTeam(teams) {
  */
 function secondHalfOfArrayIfItIsEven(fruits) {
   // Your code here
+  let newfruits = fruits.slice(fruits.length/2, fruits.length)
+  return newfruits
 }
-
+console.log(secondHalfOfArrayIfItIsEven(["apple", "orange", "banana", "kiwi"]) ,'-> ["banana", "kiwi"]')
 /**
  * youGottaCalmDown(shout):
  * - receives a string `shout`
@@ -80,8 +101,12 @@ function secondHalfOfArrayIfItIsEven(fruits) {
  */
 function youGottaCalmDown(shout) {
   // Your code here
-}
+   const shout1= shout.indexOf("!")
+   const newShout= shout.slice(0,shout1 +1)
+   return newShout
 
+}
+console.log(youGottaCalmDown("Taylor Schwifting!!!!!!!!!!!") ,'-> "Taylor Shwifting!"')
 module.exports = {
   isArrayLengthOdd,
   isArrayLengthEven,
